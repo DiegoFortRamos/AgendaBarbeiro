@@ -1,30 +1,21 @@
 package com.agenda.barbeiro.domain.barbeiro;
 
-import com.agenda.barbeiro.domain.endereco.Endereco;
-
-public record DetalhaBarbeiroDTO (
+public record ListaBarbeiroDTO(
         Long id_barbeiro,
         String nome,
         String sobrenome,
         String nascimento,
         String cpf,
-        String email,
-        Endereco endereco
+        String email
 
-
-){
-    public DetalhaBarbeiroDTO(Barbeiro barbeiro){
+) {
+    public ListaBarbeiroDTO(Barbeiro barbeiro){
         this(
                 barbeiro.getId_barbeiro(),
                 barbeiro.getNome(),
-                barbeiro.getNascimento(),
                 barbeiro.getSobrenome(),
+                barbeiro.getNascimento(),
                 barbeiro.getCpf(),
-                barbeiro.getEmail(),
-                barbeiro.getEndereco()
-
-        );
+                barbeiro.getEmail());
     }
-
-
 }

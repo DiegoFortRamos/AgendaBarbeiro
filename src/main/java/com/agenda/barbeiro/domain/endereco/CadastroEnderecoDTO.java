@@ -1,10 +1,22 @@
 package com.agenda.barbeiro.domain.endereco;
 
+import jakarta.validation.constraints.NotNull;
+
 public record CadastroEnderecoDTO(
-        String rua,
-        String cidade,
-        String estado,
+        @NotNull
         String pais,
-        String cep
+        @NotNull
+        String estado,
+        @NotNull
+        String cidade,
+        @NotNull
+        String cep,
+
+        String complemento,
+
+        int numero,
+
+        String logradouro
 ) {
+
 }
